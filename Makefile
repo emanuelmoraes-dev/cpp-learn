@@ -11,7 +11,7 @@ MAIN_FILES  = $(BIN)/namespaces
 
 CC    = g++
 FLAGS = -O3 -Wall
-LIBS  = -L $(LIB) -lm -lcpplean
+LIBS  = -L $(LIB) -lm -lcpplearn
 
 all: dirs libcpplean $(MAIN_FILES)
 
