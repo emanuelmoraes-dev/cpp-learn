@@ -16,18 +16,18 @@ LIBS  = -L $(LIB) -lm -lcpplearn
 all: dirs libcpplean $(MAIN_FILES)
 
 libcpplean: dirs $(LIB_FILES)
-		ar -rcs $(LIB)/libcpplearn.a $(OBJ)/*.o
+	ar -rcs $(LIB)/libcpplearn.a $(OBJ)/*.o
 
 clean:
-		rm -rf $(BIN)
-		rm -rf $(LIB)
-		rm -rf $(OBJ)
+	rm -rf $(BIN)
+	rm -rf $(LIB)
+	rm -rf $(OBJ)
 
 dirs:
-		mkdir -p $(BIN) $(LIB) $(OBJ)
+	mkdir -p $(BIN) $(LIB) $(OBJ)
 
 $(OBJ)/%.o: $(CPP_LIB)/%.cpp $(INCLUDE)/%.hpp
-		$(CC) $(FLAGS) -c $< -I $(INCLUDE) -o $@
+	$(CC) $(FLAGS) -c $< -I $(INCLUDE) -o $@
 
 $(BIN)/%: $(MAIN)/%.cpp
-		$(CC) $(FLAGS) $< -I $(INCLUDE) $(LIBS) -o $@
+	$(CC) $(FLAGS) $< -I $(INCLUDE) $(LIBS) -o $@
