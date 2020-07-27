@@ -4,10 +4,10 @@ LIB       = ./lib
 OBJ       = ./obj
 SRC       = ./src
 MAIN      = ./src/main
-CPP_LIBS  = ./src/cpplibs
+CPP_LIB   = ./src/cpplib
 
-LIBS_FILES  = $(OBJ)/namespaces.o
-MAIN_FILES  = $(BIN)/namespaces
+LIB_FILES  = $(OBJ)/namespaces.o
+MAIN_FILES = $(BIN)/namespaces
 
 CC    = g++
 FLAGS = -O3 -Wall
@@ -15,7 +15,7 @@ LIBS  = -L $(LIB) -lm -lcpplearn
 
 all: dirs libcpplean $(MAIN_FILES)
 
-libcpplean: dirs $(LIBS_FILES)
+libcpplean: dirs $(LIB_FILES)
 		ar -rcs $(LIB)/libcpplearn.a $(OBJ)/*.o
 
 clean:
@@ -26,7 +26,7 @@ clean:
 dirs:
 		mkdir -p $(BIN) $(LIB) $(OBJ)
 
-$(OBJ)/%.o: $(CPP_LIBS)/%.cpp $(INCLUDE)/%.hpp
+$(OBJ)/%.o: $(CPP_LIB)/%.cpp $(INCLUDE)/%.hpp
 		$(CC) $(FLAGS) -c $< -I $(INCLUDE) -o $@
 
 $(BIN)/%: $(MAIN)/%.cpp
