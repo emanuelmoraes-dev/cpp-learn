@@ -6,8 +6,8 @@ SRC       = ./src
 MAIN      = ./src/main
 CPP_LIB   = ./src/cpplib
 
-LIB_FILES  = $(OBJ)/namespaces.o
-MAIN_FILES = $(BIN)/namespaces
+LIB_FILES  = $(OBJ)/strutil.o $(OBJ)/namespaces.o $(OBJ)/polimorfismo.o
+MAIN_FILES = $(BIN)/namespaces $(BIN)/polimorfismo
 
 CC    = g++
 FLAGS = -O3 -Wall
