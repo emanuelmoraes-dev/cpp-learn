@@ -4,18 +4,18 @@
 #include <string>
 
 class Animal {
-    private:
-        std::string info;
-    public:
-        // construtors
-        Animal(std::string info);
+private:
+    std::string info;
+public:
+    // construtors
+    Animal(std::string info);
 
-        // methods
-        virtual void morder();
+    // methods
+    virtual void morder();
 
-        // getters and setters
-        std::string getInfo();
-        void setInfo(std::string info);
+    // getters and setters
+    std::string getInfo();
+    void setInfo(std::string info);
 };
 
 class Cachorro : public Animal {

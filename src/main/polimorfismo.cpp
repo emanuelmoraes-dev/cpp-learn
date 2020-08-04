@@ -1,6 +1,7 @@
 #include "polimorfismo.hpp"
 #include <locale>
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -16,6 +17,7 @@ int main(int argc, const char* argv[]) {
     cachorro.morder();
     mesmoCachorro.morder();
 
+    cout << cachorro.getInfo() << endl;
     puts(mesmoCachorro.getInfo().c_str());
 
     return 0;
