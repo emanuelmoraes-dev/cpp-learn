@@ -34,10 +34,10 @@ public:
     RegraDos5();
     // Aplicando regra dos 5
     RegraDos5(const RegraDos5&); // cópia
-    RegraDos5(const RegraDos5&&); // mover
+    RegraDos5(RegraDos5&&); // mover
     ~RegraDos5(); // destrutor
     RegraDos5& operator=(const RegraDos5&); // cópia
-    RegraDos5& operator=(const RegraDos5&&); // mover
+    RegraDos5& operator=(RegraDos5&&); // mover
 };
 
 class RegraDos0 {
