@@ -22,9 +22,9 @@ public:
     // Regra dos 5
     // ~Percorrer();
     // Percorrer(const Percorrer<T>&);
-    // Percorrer(Percorrer<T>&&);
+    Percorrer(Percorrer<T>&&);
     // Percorrer<T>& operator=(const Percorrer<T>&);
-    // Percorrer<T>& operator=(Percorrer<T>&&);
+    Percorrer<T>& operator=(Percorrer<T>&&);
 };
 
 #include "tpp/template_iterator2.cpp"
