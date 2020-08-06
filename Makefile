@@ -6,8 +6,8 @@ SRC       = ./src
 MAIN      = ./src/main
 CPP_LIB   = ./src/cpplib
 
-LIB_FILES  = $(OBJ)/namespaces.o $(OBJ)/polimorfismo.o $(OBJ)/regrados.o $(OBJ)/template_iterator.o $(OBJ)/strutil.o
-MAIN_FILES = $(BIN)/namespaces $(BIN)/polimorfismo $(BIN)/regrados $(BIN)/template_iterator
+LIB_FILES  = $(OBJ)/namespaces.o $(OBJ)/polimorfismo.o $(OBJ)/regrados.o $(OBJ)/template_iterator.o $(OBJ)/template_iterator2.o $(OBJ)/strutil.o
+MAIN_FILES = $(BIN)/namespaces $(BIN)/polimorfismo $(BIN)/regrados $(BIN)/template_iterator $(BIN)/template_iterator2
 
 CC    = g++
 FLAGS = -O3 -Wall

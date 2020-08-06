@@ -1,4 +1,4 @@
-#include "template_iterator.hpp"
+#include "template_iterator2.hpp"
 #include <iostream>
 
 using namespace std;
@@ -17,7 +17,6 @@ int main(int argc, const char* argv[]) {
 
     Percorrer<int> p2 = p1;
     // Percorrer<int>& p2 = p1;
-    // Percorrer<int> p2 = move(p1);
 
     cout << "Listando p1..." << endl;
     process(p1, [](auto& i){
