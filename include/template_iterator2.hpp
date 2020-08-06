@@ -21,7 +21,7 @@ public:
 
     // Regra dos 5
     // ~Percorrer();
-    // Percorrer(const Percorrer<T>&);
+    Percorrer(const Percorrer<T>&) = default;
     Percorrer(Percorrer<T>&&);
     // Percorrer<T>& operator=(const Percorrer<T>&);
     Percorrer<T>& operator=(Percorrer<T>&&);

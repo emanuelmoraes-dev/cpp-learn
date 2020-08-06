@@ -15,9 +15,9 @@ int main(int argc, const char* argv[]) {
     Percorrer<int> p1(&x);
     p1.next(&y).next(&z);
 
-    // Percorrer<int> p2 = p1;
+    Percorrer<int> p2 = p1;
     // Percorrer<int>& p2 = p1;
-    Percorrer<int> p2 = move(p1);
+    // Percorrer<int> p2 = move(p1);
 
     cout << "Listando p1..." << endl;
     process(p1, [](auto& i){
